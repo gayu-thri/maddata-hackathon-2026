@@ -1,1 +1,1 @@
-# MadData Hacakathon 2026
+# MadData Hackathon 2026
