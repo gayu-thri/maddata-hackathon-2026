@@ -9,7 +9,7 @@ Turning dashcam footage into real-time, geo-tagged road maintenance reports with
 ### Problem statement
 Urban road infrastructure issues often go unreported or are detected too late, leading to accidents, vehicle damage, and inefficient maintenance workflows.
 
-RoadScan AI addresses this by using AI-powered computer vision to automatically detect road hazards from dashcam or smartphone footage, geo-tag incidents, and generate actionable maintenance tickets in real time — enabling faster response and smarter city management.
+RoadScan AI addresses this by using AI-powered computer vision to automatically detect road hazards from dashcam or smartphone footage, geo-tag incidents, and generate actionable maintenance tickets in real time ,  enabling faster response and smarter city management.
 
 ## Project Summary
 End-to-end civic infrastructure reporting system. Citizen uploads a photo →
@@ -37,7 +37,7 @@ auto-filed to dashboard with department routing.
   images per class from Bing search + manual annotation
 - **Cleaning:** corrupt headers, undersized images (<64x64) removed
 - **Balancing:** undersample if n > 1200, oversample with replacement if n < 1200
-- ⚠️ Oversampled classes (e.g. normal_road had only 130 raw images) —
+- ⚠️ Oversampled classes (e.g. normal_road had only 130 raw images) , 
   duplicate source images may appear across splits (minor caveat)
 
 ---
@@ -49,7 +49,7 @@ auto-filed to dashboard with department routing.
 - **Training:** CPU only (slow), 20 epochs planned, best model saved on val_acc
 - **Val accuracy:** ~88.6% (epoch 1-2)
 - **Test accuracy:** 96.8% overall on ~800 test images
-- **Loss curves:** val loss slightly higher than train loss after epoch 2 —
+- **Loss curves:** val loss slightly higher than train loss after epoch 2 , 
   mild overfitting but not severe
 
 ---
@@ -77,7 +77,7 @@ Title, Description, Severity, Likely Cause, Est. Fix Time, Department
 ---
 
 ## Resume Bullet
-"Built an end-to-end civic reporting pipeline — fine-tuned EfficientNetV2-S
+"Built an end-to-end civic reporting pipeline. Fine-tuned EfficientNetV2-S
 on a custom 7,200-image dataset (96.8% test accuracy, 6 road defect classes)
 with confidence-gated OpenAI enrichment for automated complaint generation
 and department routing." — MadData 2026 Hackathon
@@ -85,10 +85,10 @@ and department routing." — MadData 2026 Hackathon
 ---
 
 ## Limitations
-- Oversampling used for minority classes — possible train/test overlap for
+- Oversampling used for minority classes ,  possible train/test overlap for
   those classes (normal_road, road_debris_obstruction)
-- Trained on CPU — limited epochs
-- Val loss slightly unstable after epoch 2 — would benefit from LR scheduling
+- Trained on CPU ,  limited epochs
+- Val loss slightly unstable after epoch 2 ,  would benefit from LR scheduling
   and more epochs on GPU
 
 
